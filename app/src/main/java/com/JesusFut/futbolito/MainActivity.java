@@ -46,13 +46,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     @Override
     protected void onResume() {
         super.onResume();
-        // Get updates from the rotation and magnetometer at a constant rate.
-        // To make batch operations more efficient and reduce power consumption,
-        // provide support for delaying updates to the application.
-        //
-        // In this example, the sensor reporting delay is small enough such that
-        // the application receives an update before the system checks the sensor
-        // readings again.
         Sensor acelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         if (acelerometer != null) {
             sensorManager.registerListener(this, acelerometer,
