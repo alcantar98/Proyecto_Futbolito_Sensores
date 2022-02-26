@@ -7,6 +7,9 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -38,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         porteria2 = findViewById(R.id.porteria2);
         goles1 = findViewById(R.id.txtGoles1);
         goles2 = findViewById(R.id.txtGoles2);
+
 
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
